@@ -38,3 +38,18 @@ ngrok continues to contribute to the open source ecosystem at [https://github.co
 - API Gateway: An global gateway-as-a-service that works for API running anywhere with simple CEL-based traffic policy for rate limiting, jwt authentication and more.
 - Device Gateway: Run ngrok on your IoT devices to control device APIs from your cloud 
 - Debug and understand any web service by inspecting the HTTP traffic to it
+
+--------------
+
+https://go.dev/dl/go1.20.darwin-arm64.tar.gz
+
+GO111MODULE=off make release-client
+
+```ngrok.cfg
+server_addr: "***.com:4443"
+trust_host_root_certs: true
+```
+
+```ngrok.sh
+./ngrok -config=./ngrok.cfg -subdomain=*** 80
+```
